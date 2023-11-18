@@ -40,7 +40,6 @@ stage('Checkout Code') {
         }
 
         // If you need to run the container, uncomment the following stage
-        
         stage('Run Docker Container') {
             steps {
                 // Run the Docker container
