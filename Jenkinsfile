@@ -44,8 +44,9 @@ stage('Checkout Code') {
         stage('Run Docker Container') {
             steps {
                 // Run the Docker container
+                sh "docker system prune -f"
                 
-                sh "docker run -p 5000:5000 --name my-blog-flask-app ${env.DOCKER_IMAGE}:${env.DOCKER_TAG}"
+                sh "docker run -p 5000:5000 --name my-blog-app ${env.DOCKER_IMAGE}:${env.DOCKER_TAG}"
             }
         }
         
