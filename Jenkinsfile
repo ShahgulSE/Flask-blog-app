@@ -44,6 +44,7 @@ stage('Checkout Code') {
         stage('Run Docker Container') {
             steps {
                 // Run the Docker container
+                sh "docker stop 79bf6e481d8b"
                 sh "docker ps -a"
                 sh "docker system prune -f"
                 
