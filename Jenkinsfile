@@ -26,6 +26,7 @@ stage('Checkout Code') {
                     }
                     // Build the Docker image
                     sh "docker build -t ${env.DOCKER_IMAGE}:${env.DOCKER_TAG} ."
+                    sh "pwd"
                 }
             }
         }
