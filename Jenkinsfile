@@ -48,12 +48,13 @@ stage('Checkout Code') {
                 sh "docker stop my-blog-app"
                 sh "docker ps -a"
                 sh "docker start my-blog-app"
-                sh "docker logs my-blog-app"
-                sh "docker stop my-blog-app"
-		sh "docker rm my-blog-app"
+               
 
                 
                 sh "docker run -p 5000:5000 --name my-blog-app ${env.DOCKER_IMAGE}:${env.DOCKER_TAG}"
+                 sh "docker logs my-blog-app"
+                sh "docker stop my-blog-app"
+		sh "docker rm my-blog-app"
             }
         }
         
