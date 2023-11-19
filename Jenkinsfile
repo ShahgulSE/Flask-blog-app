@@ -45,9 +45,13 @@ stage('Checkout Code') {
         stage('Run Docker Container') {
             steps {
                 // Run the Docker container
-                sh "docker stop 79bf6e481d8b"
+                sh "docker stop my-blog-app"
                 sh "docker ps -a"
-                sh "docker system prune -f"
+                sh "docker start my-blog-app"
+                sh "docker logs my-blog-app"
+                sh "docker stop my-blog-app"
+		sh "docker rm my-blog-app"
+
                 
                 sh "docker run -p 5000:5000 --name my-blog-app ${env.DOCKER_IMAGE}:${env.DOCKER_TAG}"
             }
