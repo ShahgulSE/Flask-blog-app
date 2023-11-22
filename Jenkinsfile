@@ -20,6 +20,7 @@ pipeline {
                     // sh 'echo $DOCKERHUB_PASS | docker login --username $DOCKERHUB_USER --password-stdin'
                     
                     // Start the application using Docker Compose
+                    sh 'docker-compose down'
                     sh 'docker-compose up -d'
                
                 }
