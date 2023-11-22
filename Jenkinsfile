@@ -21,6 +21,7 @@ pipeline {
                     
                     // Start the application using Docker Compose
                     sh 'docker-compose up -d'
+               
                 }
             }
         }
@@ -30,6 +31,7 @@ pipeline {
                     // Verify if the application is running correctly
                     sh 'docker-compose ps'
                     sh 'docker-compose logs web'
+                    sh 'docker logs flask-container'
                 }
             }
         }
