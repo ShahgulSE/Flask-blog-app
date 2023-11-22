@@ -1,16 +1,14 @@
 version: '3.8'
 services:
-  web:
-    container_name: flask-container
-    build: .
-    ports:
-      - "5001:5001"
-    depends_on:
-      - db
-    environment:
-      - DATABASE_URL=mysql+mysqlconnector://root:app@db/blogdb
-    volumes:
-      - .:/code
+#  web:
+#    container_name: flask-container
+#    build: .
+#    ports:
+#      - "5001:5001"
+#    depends_on:
+#      - db
+#    volumes:
+#      - .:/code
 
   db:
     container_name: db-container
