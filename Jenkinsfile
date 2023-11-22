@@ -40,7 +40,7 @@ pipeline {
     post {
         always {
             // Clean up: stop and remove docker containers and networks
-           // sh 'docker-compose down'
+            sh 'docker-compose down'
             
             // Logout from Docker Hub if you logged in before
             // sh 'docker logout'
