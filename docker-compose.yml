@@ -13,6 +13,7 @@ services:
       - .:/code
 
   db:
+    container_name: db-container
     image: mysql:5.7
     environment:
       MYSQL_DATABASE: blogdb
@@ -24,3 +25,4 @@ services:
 
 volumes:
   mysql-data:
+  
