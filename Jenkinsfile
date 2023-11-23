@@ -18,7 +18,8 @@ pipeline {
                 script {
                     // Login to Docker Hub if needed
                     // sh 'echo $DOCKERHUB_PASS | docker login --username $DOCKERHUB_USER --password-stdin'
-                    
+                    sh 'docker-compose pull'
+                    sh 'docker-compose build --no-cache'
                     // Start the application using Docker Compose
                     sh 'docker-compose down'
                     sh 'docker-compose up -d'
