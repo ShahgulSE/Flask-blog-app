@@ -33,6 +33,7 @@ pipeline {
                     sh 'docker-compose ps'
                     sh 'docker-compose logs web'
                     sh 'docker logs flask-container'
+                    sh 'sleep $((3 * 60))'
                 }
             }
         }
