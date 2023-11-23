@@ -17,7 +17,7 @@ services:
       MYSQL_DATABASE: blogdb
       MYSQL_ROOT_PASSWORD: app
     ports:
-      - "3307:3306"
+      - "3307:3307"
     volumes:
       - mysql-data:/var/lib/mysql
 
