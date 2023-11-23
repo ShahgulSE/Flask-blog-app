@@ -11,7 +11,7 @@ app.logger.setLevel(logging.ERROR)
 
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://shahgul:mysql@1996@localhost/blogdb'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:app@localhost:3307/blogdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:app@db:3307/blogdb'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
