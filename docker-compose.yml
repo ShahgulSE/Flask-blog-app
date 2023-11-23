@@ -4,7 +4,7 @@ services:
     container_name: flask-container
     build: .
     ports:
-      - "5001:5001"
+      - "5001:5000"
     depends_on:
       - db
 
