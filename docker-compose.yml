@@ -7,6 +7,8 @@ services:
       - "5001:5000"
     depends_on:
       - db
+    volumes:
+      - .:/code
 
   db:
     container_name: db-container
