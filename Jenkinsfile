@@ -22,7 +22,7 @@ pipeline {
                     sh 'docker-compose build --no-cache'
                     // Start the application using Docker Compose
                     sh 'docker-compose down'
-                    sh 'docker-compose up -d'
+                    sh 'docker-compose up --build'
                
                 }
             }
